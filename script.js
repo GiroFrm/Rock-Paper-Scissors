@@ -3,11 +3,15 @@ function getComputerChoice(){
 
     let number =  Math.floor(Math.random() * 3);
 
-    if(number=== 0){ return "rock";
+    if(number=== 0){ 
+        return "rock";
+
     } else if(number === 1) {
+
         return "paper";
     }
     else if(number === 2) {
+        
         return "scissors"
     }
 
@@ -21,4 +25,7 @@ function getHumanChoice(){
     return choice;
 }
 
-console.log(getHumanChoice())
+//console.log(getHumanChoice())
+
+let humanScore = 0;
+let computerScore = 0;
