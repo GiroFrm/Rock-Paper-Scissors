@@ -61,15 +61,30 @@ function playRound(humanChoice, computerChoice){
 
         console.log("You lose! scissors beats rock ")
         computerScore++;
-    } 
+    
+    } else if(humanChoice === "rock" && computerChoice === "rock") {
+
+        console.log("Even no one wins")
+    
+    } else if(humanChoice === "paper" && computerChoice === "paper") {
+
+        console.log("Even no one wins")
+    
+    } else if(humanChoice === "scissors" && computerChoice === "scissors") {
+
+        console.log("Even no one wins")
+    }
 
 }
 
-playRound("rock", "paper");
-playRound("rock", "scissors");
-playRound("paper", "scissors");
-playRound("scissors", "paper");
-playRound("scissors", "paper");
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection);
 
 console.log(computerScore);
 console.log(humanScore);
