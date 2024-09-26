@@ -17,16 +17,11 @@ function getComputerChoice(){
 
 }
 
-//console.log(getComputerChoice());
-
 function getHumanChoice(){
     let choice = prompt("what's your choice?");
     
     return choice;
 }
-
-//console.log(getHumanChoice())
-
 
 
 function playGame(){
