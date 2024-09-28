@@ -18,11 +18,12 @@ function getHumanChoice() {
 }
 
 
-function playGame() {
+// function playGame() {
+
     let humanScore = 0;
     let computerScore = 0;
 
-function playRound(humanChoice, computerChoice){
+function playRound(humanChoice, computerChoice) {
   
     if(humanChoice === "paper" && computerChoice === "scissors") {
       console.log("You lose! Scissors beats Paper");
@@ -57,16 +58,49 @@ function playRound(humanChoice, computerChoice){
 //     playRound(humanChoice, computerChoice);
 // }
 
-if (humanScore>computerScore){
-    console.log("Human wins the game!"+humanScore+"::"+computerScore)
-} else if (computerScore>humanScore){
-    console.log("Computer wins the game!"+computerScore+"::"+humanScore)
-} else {
-    console.log("It's a tie! No one wins!")
+function checkWinner(){
+    let result ="Giro"
+    if (humanScore>computerScore){
+        console.log("Human wins the game!"+humanScore+"::"+computerScore);
+        result = "Human wins the game!"+humanScore+"::"+computerScore;
+    } else if (computerScore>humanScore){
+        console.log("Computer wins the game!"+computerScore+"::"+humanScore);
+        result = "Computer wins the game!"+computerScore+"::"+humanScore;
+    } else {
+        console.log("It's a tie! No one wins!");
+        result = "It's a tie! No one wins!"
+    }
+    return result;
 }
+// }
 
-}
 
+// playGame();
 
-playGame();
+ let counter = 0;
+const btns = document.querySelectorAll("button");
+const computer_score = document.querySelector(".computer_score");
+const human_score = document.querySelector(".human_score");
+const winner =document.querySelector(".winner");
+const btn_reset = document.querySelector(".btn_reset");
+    btn_reset.disabled = true;
+
+btns.forEach(btn => {
+    btn.addEventListener("click", function() {
+        counter++;
+        let computerChoice = getComputerChoice();
+        let humanChoice = this.innerText;
+        playRound(humanChoice, computerChoice);
+        computer_score.innerHTML = computerScore;
+        human_score.innerHTML = humanScore;
+        if(counter>=5){
+           winner.innerText = checkWinner();
+           btns.forEach(btn => {
+            btn.disabled = true;
+           })
+           btn_reset.disabled = false;
+        }
+    })
+
+})
 
