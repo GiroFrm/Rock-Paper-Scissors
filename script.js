@@ -51,11 +51,11 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-for (let i = 0; i<5; i++) {
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
-}
+// for (let i = 0; i<5; i++) {
+//     let humanChoice = getHumanChoice();
+//     let computerChoice = getComputerChoice();
+//     playRound(humanChoice, computerChoice);
+// }
 
 if (humanScore>computerScore){
     console.log("Human wins the game!"+humanScore+"::"+computerScore)
