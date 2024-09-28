@@ -18,8 +18,6 @@ function getHumanChoice() {
 }
 
 
-// function playGame() {
-
     let humanScore = 0;
     let computerScore = 0;
 
@@ -52,14 +50,9 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// for (let i = 0; i<5; i++) {
-//     let humanChoice = getHumanChoice();
-//     let computerChoice = getComputerChoice();
-//     playRound(humanChoice, computerChoice);
-// }
 
 function checkWinner(){
-    let result ="Giro"
+    let result =""
     if (humanScore>computerScore){
         console.log("Human wins the game!"+humanScore+"::"+computerScore);
         result = "Human wins the game!"+humanScore+"::"+computerScore;
@@ -72,10 +65,6 @@ function checkWinner(){
     }
     return result;
 }
-// }
-
-
-// playGame();
 
  let counter = 0;
 const btns = document.querySelectorAll("button");
