@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defear></script> 
+    <script src="script.js" defer></script> 
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <button>Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
-  
+    <div>
+        <h3>score:</h3>
+        <p>Computer:<span class="computer_score"></span></p>
+        <p>Human:<span class="human_score"></span></p>
+        <p class="winner"></p>
+    </div>
+    <button id="rock">rock</button>
+    <button>paper</button>
+    <button>scissors</button>
+    <button onclick="location.reload()" class="btn_reset">reset</button>
 </body>
 </html>
